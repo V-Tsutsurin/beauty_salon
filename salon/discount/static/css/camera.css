@@ -212,7 +212,7 @@
 .camera_next > span:hover,
 .camera_prev > span:hover {
 	background-position:0 -29px;
-	background-color:#aacaab;
+	background-color:#bb68b7;
 }
 .showIt {display: none;
 }

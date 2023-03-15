@@ -7,7 +7,7 @@ textarea {
 	resize: none;
 }
 a {
-	color:#aacaab;
+	color:#bb68b7;
 	transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
 }
@@ -89,7 +89,7 @@ img {
 }
 .email_block a,
 .phone_block span {
-	color:#aacaab;
+	color:#bb68b7;
 }
 
 /* ______________________ //Top info ______________________ */
@@ -140,7 +140,7 @@ img {
 .menu_wrap .nav li:hover a,
 .menu_wrap .nav li.current:hover a,
 .menu_wrap .nav li.current a {
-	color:#aacaab;
+	color:#bb68b7;
 }
 
 .sub-menu > a {position: relative;
@@ -308,10 +308,11 @@ img {
 	font-weight:700;
 	line-height:20px;
 	font-size:14px;
-	color:#aacaab;
+	/*color:#aacaab;*/
+	color: black;
 }
 .welcome_block a.welc_btn:hover {
-	background:#aacaab;
+	background:#bb68b7;
 	color:#fff;
 }
 

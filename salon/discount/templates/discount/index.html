@@ -1,11 +1,120 @@
 {% extends 'discount/base.html' %}
 {% load static %}
 {% block content %}
- <div>
+<div class="page_container">
+			<!--slider-->
+			<div id="main_slider">
+				<div class="camera_wrap" id="camera_wrap_1">
+					<div data-src="{% static 'image/slider/slide1.jpg' %}">
+						<div class="camera_caption fadeIn">
+							<div class="slide_descr">Оживи свою красоту!</div>
+						</div>
+					</div>
+					<div data-src="{% static 'image/slider/slide2.jpg' %}">
+						<div class="camera_caption2 fadeIn">
+							<div class="slide_descr">Оживи свою красоту!</div>
+						</div>
+					</div>
+					<div data-src="{% static 'image/slider/slide3.jpg' %}">
+						<div class="camera_caption3 fadeIn">
+							<div class="slide_descr">Оживи свою красоту!</div>
+						</div>
+					</div>
+				</div><!-- #camera_wrap_1 -->
+				<div class="clear"></div>
+			</div>
+			<!--//slider-->
+
+			<!--Welcome-->
+			<div class="wrap welcome_bg">
+				<div class="welcome_block">
+					<span>Превратите свои волосы в произведение</br>искусства с нашей помощью!</span>
+					<a class="welc_btn" href="javascript:void(0);">Примеры работ</a>
+				</div>
+			</div>
+			<!--//Welcome-->
+
+			<!--Latest news-->
+			<div class="wrap latest_news_block">
+				<h2 class="title">Действующие акции</h2>
+				<ul class="row">
+					{% for discount in discounts %}
+					<li class="span3 ">
+						<div class="post_prev">
+							<img src="{{ discount.image.url }}" alt="">
+							<a href="{% url 'discount.detail' discount.id %}"> </a>
+						</div>
+					</li>
+					{% endfor %}
+
+<!--					<li class="span3 ">-->
+<!--						<div class="post_prev">-->
+<!--							<img src="{% static 'image/blog/post_prev1.jpg' %}" alt="" />-->
+<!--							<a class="zoom_block" href="{% static 'image/blog/post_prev1.jpg' %}"> </a>-->
+<!--						</div>-->
+<!--					</li>-->
 
 
-	 <h1>CONTENT</h1>
+
+<!--					<li class="span3 ">-->
+<!--						<div class="post_prev">-->
+<!--							<img src="{% static 'image/blog/post_prev2.jpg' %}" alt="" />-->
+<!--							<a class="zoom_block" href="{% static 'image/blog/post_prev2.jpg' %}" rel="prettyPhoto[portfolio1]"><span class="zoom"></span></a>-->
+<!--						</div>-->
+<!--					</li>-->
+<!--					<li class="span3 ">-->
+<!--						<div class="post_prev">-->
+<!--							<img src="{% static 'image/blog/post_prev3.jpg' %}" alt="" />-->
+<!--							<a class="zoom_block" href="{% static 'image/blog/post_prev3.jpg' %}" rel="prettyPhoto[portfolio1]"><span class="zoom"></span></a>-->
+<!--						</div>-->
+<!--					</li>-->
+<!--					<li class="span3 ">-->
+<!--						<div class="post_prev">-->
+<!--							<img src="{% static 'image/blog/post_prev4.jpg' %}" alt="" />-->
+<!--							<a class="zoom_block" href="{% static 'image/blog/post_prev4.jpg' %}" rel="prettyPhoto[portfolio1]"><span class="zoom"></span></a>-->
+<!--						</div>-->
+<!--					</li>-->
+					<div class="clear"></div>
+				</ul>
+			</div>
+			<!--Latest news-->
 
 
- </div>
+
+			<!--planning-->
+<!--			<div class="wrap planning">-->
+<!--				<div class="row">-->
+<!--					<a class="span4" href="javascript:void(0);">-->
+<!--						<span class="service_block">-->
+<!--							<span class="icon_block">-->
+<!--								<img src="{% static 'image/icon1.png' %}" />-->
+<!--							</span>-->
+<!--							<span class="link_title">Spa & Relaxing</span>-->
+<!--							<span class="service_txt">Donec euismod risus tortor, quis sodales lorem malesuada eget</span>-->
+<!--						</span>-->
+<!--					</a>-->
+<!--					<a class="span4" href="javascript:void(0);">-->
+<!--						<span class="service_block">-->
+<!--							<span class="icon_block">-->
+<!--								<img src="{% static 'image/icon2.png' %}" />-->
+<!--							</span>-->
+<!--							<span class="link_title">Cutting & Styling</span>-->
+<!--							<span class="service_txt">Morbi ligula turpis, aliquet sit amet luctus at, mollis vel lacus. Nulla</span>-->
+<!--						</span>-->
+<!--					</a>-->
+<!--					<a class="span4" href="javascript:void(0);">-->
+<!--						<span class="service_block">-->
+<!--							<span class="icon_block">-->
+<!--								<img src="{% static 'image/icon3.png' %}" />-->
+<!--							</span>-->
+<!--							<span class="link_title">Make Up</span>-->
+<!--							<span class="service_txt">Nunc consequat iaculis risus, nec eleifend ligula tempus in. Sed orci tellus</span>-->
+<!--						</span>-->
+<!--					</a>-->
+<!--					<div class="clear"></div>-->
+<!--				</div>-->
+<!--			</div>-->
+			<!--//planning-->
+
+		</div>
 {% endblock %}
