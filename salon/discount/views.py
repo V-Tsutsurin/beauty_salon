@@ -8,5 +8,5 @@ def index(request):
 
 
 def detail(request, discount_id):
-    discount = get_object_or_404(Discount, pk=discount_id)
-    return render(request, 'discount/discoubt_page.html', {'discount': discount})
+    discount_obj = get_object_or_404(Discount, pk=discount_id)
+    return render(request, 'discount/discount_page.html', {'discount': discount_obj})

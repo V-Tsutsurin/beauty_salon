@@ -42,7 +42,7 @@
 					<li class="span3 ">
 						<div class="post_prev">
 							<img src="{{ discount.image.url }}" alt="">
-							<a href="{% url 'discount.detail' discount.id %}"> </a>
+							<a href="{% url 'discount:detail' discount.id %}">{{ discount.title }} </a>
 						</div>
 					</li>
 					{% endfor %}

@@ -3,6 +3,7 @@ from . import views
 
 
 app_name = 'discount'
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('<int:discount_id>/', views.detail, name='detail'),
