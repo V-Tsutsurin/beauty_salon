@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Discount
+from .models import Discount, Slider
 
 
 def index(request):
     discount = Discount.objects.order_by('-date')
-    return render(request, 'discount/index.html', {'discounts': discount})
+    slider = Slider.objects.all()
+    return render(request, 'discount/index.html', {'discounts': discount, 'sliders': slider})
 
 
 def detail(request, discount_id):

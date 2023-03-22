@@ -5,21 +5,13 @@
 			<!--slider-->
 			<div id="main_slider">
 				<div class="camera_wrap" id="camera_wrap_1">
-					<div data-src="{% static 'image/slider/slide1.jpg' %}">
+					{% for slider in sliders %}
+					<div data-src="{{ slider.slider.url }}">
 						<div class="camera_caption fadeIn">
-							<div class="slide_descr">Оживи свою красоту!</div>
+							<div class="slide_descr">{{ slider.slider_description }}</div>
 						</div>
 					</div>
-					<div data-src="{% static 'image/slider/slide2.jpg' %}">
-						<div class="camera_caption2 fadeIn">
-							<div class="slide_descr">Оживи свою красоту!</div>
-						</div>
-					</div>
-					<div data-src="{% static 'image/slider/slide3.jpg' %}">
-						<div class="camera_caption3 fadeIn">
-							<div class="slide_descr">Оживи свою красоту!</div>
-						</div>
-					</div>
+					{% endfor %}
 				</div><!-- #camera_wrap_1 -->
 				<div class="clear"></div>
 			</div>
