@@ -22,13 +22,13 @@
 <div class="container box_shadow">
 	<div class="header">
 		<div class="wrap">
-			<div class="navbar navbar_ clearfix"">
+			<div class="navbar navbar_ clearfix">
 				<div class="container menu_bg">
 					<nav class="main_menu">
 						<div class="menu_wrap">
 							<ul class="nav sf-menu">
-								<li class=""><a href="/">Главная страница</a></li>
-								<li class=""><a href="news/">Новости</a></li>
+								<li class=""><a href="{% url 'discount:index' %}">Главная страница</a></li>
+								<li class=""><a href="{% url 'news:news' %}">Новости</a></li>
 								<li class=""><a href="#">Услуги и цены</a></li>
 								<li class=""><a href="#">Мастера</a></li>
 								<li class=""><a href="#">Фотографии работ</a></li>
@@ -40,7 +40,7 @@
 			</div>
 			<div class="container">
 				<div class="phone_block">Телефон: <span>+7 (960) 205-69-00</span></div>
-				<div class="logo"><a href=""><img src="{% static 'image/logo.png' %}" alt="" /></a></div>
+				<div class="logo"><a href="{% url 'discount:index' %}"><img src="{% static 'image/logo.png' %}" alt="" /></a></div>
 				<div class="email_block">VK: <a href="http://vk.com/studiovip53" target="_blank">http://vk.com/studiovip53</a></div>
 				<div class="clear"></div>
 			</div>
@@ -56,7 +56,7 @@
 				<div>
 					<div class="row">
 						<div class="span4">
-							<a class="foot_logo" href="index.html" alt=""><img src="{% static 'image/foot_logo.png' %}"/></a>
+							<a class="foot_logo" href="{% url 'discount:index' %}" alt=""><img src="{% static 'image/foot_logo.png' %}"/></a>
 							<p>С заботой о каждом клиенте</p>
 							<p>У нас уютно</p>
 						</div>

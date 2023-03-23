@@ -5,7 +5,11 @@ from .models import Discount, Slider
 def index(request):
     discount = Discount.objects.order_by('-date')
     slider = Slider.objects.all()
-    return render(request, 'discount/index.html', {'discounts': discount, 'sliders': slider})
+    context = {
+        'discounts': discount,
+        'sliders': slider
+    }
+    return render(request, 'discount/index.html', context)
 
 
 def detail(request, discount_id):
