@@ -6,6 +6,6 @@ app_name = 'news'
 
 urlpatterns = [
     path('news/', views.news, name='news'),
-    # path('<int:discount_id>/', views.detail, name='detail'),
+    path('news/<int:news_id>/', views.detail, name='detail'),
 
 ]
