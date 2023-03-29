@@ -1,0 +1,16 @@
+{% extends 'discount/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="post">
+  <img src="{{ discount.image.url }}" alt="" />
+  <div class="post_info">
+        <div class="fleft">On <span>{{ discount.date|date:'j E Y' }}</span> / By <a href="#">John Smith</a> / Tags <a href="#">Works</a>, <a href="#">Personal</a></div>
+        <div class="fright"><a href="#">25</a> Comments</div>
+        <div class="clear"></div>
+  </div>
+    <p>{{ discount.description }}</p>
+</div>
+
+
+{% endblock %}
