@@ -2,15 +2,25 @@
 {% load static %}
 {% block content %}
 
-<div class="post">
-  <img src="{{ discount.image.url }}" alt="" />
-  <div class="post_info">
-        <div class="fleft">On <span>{{ discount.date|date:'j E Y' }}</span> / By <a href="#">John Smith</a> / Tags <a href="#">Works</a>, <a href="#">Personal</a></div>
-        <div class="fright"><a href="#">25</a> Comments</div>
-        <div class="clear"></div>
-  </div>
-    <p>{{ discount.description }}</p>
-</div>
 
+<h2 class="title">Our Team</h2>
+
+                    <p>Шишкина 299</p>
+
+                    {% for master in masters %}
+
+                	<div class="row">
+                        <div class="span3">
+                            <div class="profile">
+                            	<img alt="" src="{{ master.photo.url }}">
+                                <h4>{{ master.name}}</h4>
+                                <div class="profile_title">Business Analyst</div>
+                                <p>Praesent vestibulum molestie lacus. Aenean noy hendrerit mauris. Phasellus porta. Fusce suscipit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+<!--
 
 {% endblock %}

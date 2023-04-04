@@ -24,7 +24,7 @@
                         {% for news in news_list %}
                         <div class="span4 element category01 height_3column" data-category="category01">
                             <div class="hover_img">
-                                <img src="{{ news.image.url}}" alt="" />
+                                <img src="{{ news.image.url }}" alt="" />
                                 <span class="portfolio_zoom"><a href="{{ news.image.url}}" rel="prettyPhoto[portfolio1]"></a></span>
                                 <span class="portfolio_link"><a href="{% url 'news:detail' news.id %}">View item</a></span>
                             </div>
