@@ -2,25 +2,42 @@
 {% load static %}
 {% block content %}
 
-
+<section>
 <h2 class="title">Our Team</h2>
 
                     <p>Шишкина 299</p>
 
-                    {% for master in masters %}
 
                 	<div class="row">
+                        {% for master in master1 %}
                         <div class="span3">
                             <div class="profile">
                             	<img alt="" src="{{ master.photo.url }}">
                                 <h4>{{ master.name}}</h4>
-                                <div class="profile_title">Business Analyst</div>
+                                <div class="profile_title">{{ master.specialization }}</div>
+                                    <div class="btn-group" style="margin: 9px 0;">
+                                        <button class="btn">Middle</button>
+                                    </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <p>Шишкина 299</p>
+
+
+                	<div class="row">
+                        {% for master in master2 %}
+                        <div class="span3">
+                            <div class="profile">
+                            	<img alt="" src="{{ master.photo.url }}">
+                                <h4>{{ master.name}}</h4>
+                                <div class="profile_title">{{ master.specialization }}</div>
                                 <p>Praesent vestibulum molestie lacus. Aenean noy hendrerit mauris. Phasellus porta. Fusce suscipit.</p>
                             </div>
                         </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
 
-<!--
-
+</section>
 {% endblock %}
