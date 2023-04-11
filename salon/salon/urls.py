@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('discount.urls')),
     path('', include('news.urls')),
     path('', include('masters.urls')),
+    path('', include('services.urls')),
 ]
 
 

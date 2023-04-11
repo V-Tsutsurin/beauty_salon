@@ -13,17 +13,17 @@
                         <div class="span3">
                             <div class="profile">
                             	<img alt="" src="{{ master.photo.url }}">
-                                <h4>{{ master.name}}</h4>
+                                <h4>{{ master.name }}</h4>
                                 <div class="profile_title">{{ master.specialization }}</div>
                                     <div class="btn-group" style="margin: 9px 0;">
-                                        <button class="btn">Middle</button>
+                                        <button class="btn"><a href="{{ master.link }}">Записаться</a></button>
                                     </div>
                             </div>
                         </div>
                         {% endfor %}
                     </div>
 
-                    <p>Шишкина 299</p>
+                    <p>Заречная</p>
 
 
                 	<div class="row">
@@ -33,7 +33,9 @@
                             	<img alt="" src="{{ master.photo.url }}">
                                 <h4>{{ master.name}}</h4>
                                 <div class="profile_title">{{ master.specialization }}</div>
-                                <p>Praesent vestibulum molestie lacus. Aenean noy hendrerit mauris. Phasellus porta. Fusce suscipit.</p>
+                                <div class="btn-group" style="margin: 9px 0;">
+                                        <button class="btn"><a href="{{ master.link }}">Записаться</a></button>
+                                </div>
                             </div>
                         </div>
                         {% endfor %}

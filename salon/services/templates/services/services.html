@@ -1,0 +1,25 @@
+{% extends 'discount/base.html' %}
+{% load static %}
+{% block content %}
+
+<h3>Table options</h3>
+                  <table class="table table-bordered table-striped ">
+                  <thead>
+                      <tr>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Описание</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                        {% for services in services %}
+                      <tr>
+                         <td>{{ services.title}}</td>
+                         <td class="muted">{{ services.price}}</td>
+                         <td>{{ services.description}}</td>
+                      </tr>
+                        {% endfor %}
+                  </tbody>
+                  </table>
+{% endblock %}
