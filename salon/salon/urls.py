@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include('news.urls')),
     path('', include('masters.urls')),
     path('', include('services.urls')),
+    path('', include('additional.urls')),
 ]
 
 
