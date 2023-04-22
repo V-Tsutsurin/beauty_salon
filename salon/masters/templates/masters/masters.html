@@ -3,9 +3,15 @@
 {% block content %}
 
 <section>
-<h2 class="title">Our Team</h2>
+<div class="breadcrumb">
+				<div>
+					<a href="{% url 'discount:index' %}">Главная страница</a><span>/</span>Мастера
+				</div>
+			</div>
 
-                    <p>Шишкина 299</p>
+<h2 class="title">Наши мастера</h2>
+                    <h4>Шишкина 299</h4>
+<!--                    <p>Шишкина 299</p>-->
 
 
                 	<div class="row">
@@ -16,15 +22,15 @@
                                 <h4>{{ master.name }}</h4>
                                 <div class="profile_title">{{ master.specialization }}</div>
                                     <div class="btn-group" style="margin: 9px 0;">
-                                        <button class="btn"><a href="{{ master.link }}">Записаться</a></button>
+                                        <button class="btn"><a href="{{ master.link }}" target="_blank">Записаться</a></button>
                                     </div>
                             </div>
                         </div>
                         {% endfor %}
                     </div>
 
-                    <p>Заречная</p>
-
+                    <h4>Заречная дом 45 корпус 2 парадная 4</h4>
+<!--                    <p>Заречная</p>-->
 
                 	<div class="row">
                         {% for master in master2 %}

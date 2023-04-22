@@ -5,11 +5,11 @@
 <div class="post">
   <img src="{{ news.image.url }}" alt="" />
   <div class="post_info">
-        <div class="fleft">On <span>{{ news.date|date:'j E Y' }}</span> / By <a href="#">John Smith</a> / Tags <a href="#">Works</a>, <a href="#">Personal</a></div>
-        <div class="fright"><a href="#">25</a> Comments</div>
+        <div class="fleft"><span>{{ news.date|date:'j E Y' }}</span></div>
+<!--        <div class="fright"><a href="#">25</a> Comments</div>-->
         <div class="clear"></div>
   </div>
-    <p>{{ news.description }}</p>
+    <p>{{ news.description|safe }}</p>
 </div>
 
 

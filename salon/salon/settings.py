@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'services.apps.ServicesConfig',
     'masters.apps.MastersConfig',
     'additional.apps.AdditionalConfig',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +124,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'

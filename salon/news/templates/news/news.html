@@ -5,7 +5,7 @@
     	<div class="wrap">
         	<div class="breadcrumb">
 				<div>
-					<a href="index.html">Home</a><span>/</span>Portfolio 3 columns
+					<a href="{% url 'discount:index' %}">Главная страница</a><span>/</span>Новости
 				</div>
 			</div>
 			<div class="container">
@@ -22,15 +22,16 @@
                     <!-- portfolio_block -->
                     <div class="projects">
                         {% for news in news_list %}
-                        <div class="span4 element category01 height_3column" data-category="category01">
+                        <div class="span3 element category01 height_3column" data-category="category01">
                             <div class="hover_img">
-                                <img src="{{ news.image.url }}" alt="" />
-                                <span class="portfolio_zoom"><a href="{{ news.image.url}}" rel="prettyPhoto[portfolio1]"></a></span>
-                                <span class="portfolio_link"><a href="{% url 'news:detail' news.id %}">View item</a></span>
+                                <a href="{% url 'news:detail' news.id %}"><img src="{{ news.image.url }}" alt="" /></a>
+
+<!--                                <span class="portfolio_zoom"><a href="{{ news.image.url}}" rel="prettyPhoto[portfolio1]"></a></span>-->
+<!--                                <span class="portfolio_link"><a href="{% url 'news:detail' news.id %}">View item</a></span>-->
                             </div>
                             <div class="item_description">
                                 <h6><a href="{% url 'news:detail' news.id %}">{{ news.title }}</a></h6>
-                                <div class="descr">{{ news.description|slice:120}}...</div>
+                                <div class="descr">{{ news.description|striptags|slice:120}}...</div>
                             </div>
                         </div>
                         {% endfor %}

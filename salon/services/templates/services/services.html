@@ -1,8 +1,12 @@
 {% extends 'discount/base.html' %}
 {% load static %}
 {% block content %}
-
-<h3>Table options</h3>
+<div class="breadcrumb">
+				<div>
+					<a href="{% url 'discount:index' %}">Главная страница</a><span>/</span>Услуги и цены
+				</div>
+			</div>
+                <h3>Парикмахерский зал</h3>
                   <table class="table table-bordered table-striped ">
                   <thead>
                       <tr>
@@ -13,7 +17,49 @@
                   </thead>
                   <tbody>
 
-                        {% for services in services %}
+                        {% for services in sevices1 %}
+                      <tr>
+                         <td>{{ services.title}}</td>
+                         <td class="muted">{{ services.price}}</td>
+                         <td>{{ services.description}}</td>
+                      </tr>
+                        {% endfor %}
+                  </tbody>
+                  </table>
+
+            <h3>Маникюр/педикюр</h3>
+                  <table class="table table-bordered table-striped ">
+                  <thead>
+                      <tr>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Описание</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                        {% for services in sevices2 %}
+                      <tr>
+                         <td>{{ services.title}}</td>
+                         <td class="muted">{{ services.price}}</td>
+                         <td>{{ services.description}}</td>
+                      </tr>
+                        {% endfor %}
+                  </tbody>
+                  </table>
+
+            <h3>Брови/ресницы</h3>
+                  <table class="table table-bordered table-striped ">
+                  <thead>
+                      <tr>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Описание</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                        {% for services in sevices3 %}
                       <tr>
                          <td>{{ services.title}}</td>
                          <td class="muted">{{ services.price}}</td>
